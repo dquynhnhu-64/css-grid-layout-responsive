@@ -1,0 +1,47 @@
+.header {
+  background-color: $dark-color;
+  color: $white;
+  padding: 15px 0;
+
+  .nav-container {
+    @include flex-center(row, space-between, center);
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    .nav-menu {
+      @include flex-center(row, center, center);
+      gap: 20px;
+
+      li a {
+        transition: color 0.3s;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      @include tablet {
+        display: none; // Menu mobile có thể mở rộng sau
+      }
+    }
+  }
+
+  .hero {
+    text-align: center;
+    padding: 60px 20px;
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .btn-hero {
+      @include button-style($primary-color);
+      margin-top: 20px;
+    }
+  }
+}

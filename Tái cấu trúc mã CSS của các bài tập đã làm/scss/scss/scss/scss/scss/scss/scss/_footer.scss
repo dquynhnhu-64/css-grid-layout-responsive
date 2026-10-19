@@ -1,0 +1,37 @@
+.footer {
+  background-color: $dark-color;
+  color: $gray-color;
+  padding: 40px 0 20px;
+
+  .footer-content {
+    @include flex-center(row, space-between, flex-start);
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    .footer-col {
+      flex: 1;
+      min-width: 200px;
+
+      h4 {
+        color: $white;
+        margin-bottom: 15px;
+      }
+
+      ul li {
+        margin-bottom: 8px;
+
+        a:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    border-top: 1px solid rgba($white, 0.1);
+    padding-top: 20px;
+    font-size: 14px;
+  }
+}

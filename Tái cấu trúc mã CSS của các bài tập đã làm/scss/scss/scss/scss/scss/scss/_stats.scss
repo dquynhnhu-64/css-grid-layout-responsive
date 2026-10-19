@@ -1,0 +1,29 @@
+.stats {
+  padding: 50px 0;
+  background-color: $primary-color;
+  color: $white;
+
+  .stats-grid {
+    @include flex-center(row, space-around, center);
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .stat-item {
+      text-align: center;
+
+      .number {
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .label {
+        font-size: 16px;
+        opacity: 0.9;
+      }
+    }
+
+    @include mobile {
+      @include flex-center(column, center, center);
+    }
+  }
+}

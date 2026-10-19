@@ -1,0 +1,35 @@
+// Mixin căn chỉnh Flexbox nhanh
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Mixin Media Queries Responsive
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+// Mixin nút bấm
+@mixin button-style($bg-color, $text-color: $white) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
